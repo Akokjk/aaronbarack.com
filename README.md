@@ -32,9 +32,9 @@ Notes: I am building this based on what is conveyed from chapter one. I am still
 
 
 # Flowchart
-![conceptual chart of design](./src/flowchart.pdf)
+![conceptual chart of design](./src/graphics/flowchart.png)
 
 ## Resources used:
 [Flow chart design](https://www.youtube.com/watch?v=LoBC8zIB-3k)
 
-  [The Design of Everyday Things by Don Norman](https://www.sunyoungkim.org/class/old/hci_f18/pdf/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf)
+[The Design of Everyday Things by Don Norman](https://www.sunyoungkim.org/class/old/hci_f18/pdf/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf)
