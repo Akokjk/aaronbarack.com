@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <head>
+    <title>Playground</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <link rel="stylesheet" href="styles/testing.css">
+  </head>
+  <body onresize="repeat('Aaron&nbsp;')" onload="repeat('Barack&nbsp;')">
+    <div id="mover">
+      <p id ="up" onclick="scrolling(false)">&uarr;</p>
+      <p id ="down" onclick="scrolling(true)">&darr;</p>
+    </div>
+    <div id="repeater">
+      <h1>THE REPEATER</h1>
+      <p id="string"></p>
+    </div>
+    <div class="page">
+      <h1>THE BUTTON</h1>
+      <button>CLick ME</button>
+    </div>
+    <div class="page" id="gratio" onresize="golden(1.618, 10)">
+      <div id="grid"></div>
+      <h1>The Golden Ratio</h1>
+      <div id="circle"></div>
+    </div>
+
+  </body>
+  <script>
+  golden(1.618, 10);
+  const el = document.querySelector("body");
+  el.onwheel = scroll;
+  function scroll(event) {
+    if(event.deltaY < 0) scrolling(false)
+    else scrolling(true)
+    //console.log("scrolling " + event.deltaY)
+  }
+  document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 33 || event.keyCode == 38) { //page up
+          scrolling(false)
+    }
+    else if(event.keyCode == 34 || event.keyCode == 40) { //page down
+          scrolling(true)
+    }
+  });
+    function scrolling(x){
+        window.scrollBy(0, x? $(".page").height() : -$(".page").height());
+        console.log("page height " +  x? $(".page").height() : -$(".page").height());
+    }
+    function repeat(string){
+      $("#string").text(string);
+      var fontx = $("#string").width();
+      var fonty = $("#string").height();
+      console.log("x " + fontx + " y " + fonty);
+      var funx =  Math.floor(($("#repeater").width())  / fontx) - 1;
+      var funy =  Math.floor((window.innerHeight -$("#repeater h1").height()) / fonty) - 4;
+      for(i =0; i < funx - 1; i++) {
+        $("#string").text($("#string").text() + string ) ;
+      }
+      string = $("#string").text();
+      for(i =0; i < funy-1; i++) {
+        $("#string").text($("#string").text() + "\n" + string) ;
+      }
+      console.log("fun x " + funx + " fun y " + funy);
+    }
+    function golden(ratio, grid){
+      unit_x = window.innerWidth/grid;
+      unit_y = window.innerHeight/grid;
+      for(i = 0; i < grid*grid; i++){
+        $('#grid').prepend('<div class="unit"></div>');
+      }
+      $('.unit').height(Math.floor(unit_y));
+      $('.unit').width(Math.floor(unit_x));
+    }
+
+
+
+  </script>
+</html>
