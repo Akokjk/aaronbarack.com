@@ -16,11 +16,11 @@ Notes: I am building this based on what is conveyed from chapter one. I am still
     3. What is about to happen?
     4. Communication especially when things go wrong.
 
-### Principles of design:
+## Principles of design:
   1. Discoverability
-    - What the website does
-    - How it works
-    - What operations are possible?
+    * What the website does.
+    * How it works.
+    * What operations are possible?
 
 ## The five Psychological aspects of Discoverability:
   1. What affordances are made?
