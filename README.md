@@ -16,7 +16,7 @@ Notes: I am building this based on what is conveyed from chapter one. I am still
     3. What is about to happen?
     4. Communication especially when things go wrong.
 
-## Principles of design:
+# Principles of design:
   1. Discoverability
      * What the website does.
      * How it works.
@@ -32,7 +32,7 @@ Notes: I am building this based on what is conveyed from chapter one. I am still
 
 
 # Flowchart
-![conceptual chart of design](./src/graphics/flowchart.png)
+![conceptual chart of design](./src/graphics/flowchart.pdf)
 
 ## Resources used:
 [Flow chart design](https://www.youtube.com/watch?v=LoBC8zIB-3k)
